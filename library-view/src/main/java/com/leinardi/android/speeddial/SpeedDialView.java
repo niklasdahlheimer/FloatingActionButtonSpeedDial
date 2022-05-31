@@ -489,6 +489,23 @@ public class SpeedDialView extends LinearLayout implements CoordinatorLayout.Att
         return speedDialActionItems;
     }
 
+    @Nullable
+    public FabWithLabelView getFabWithLabelViewsById(int id){
+        for (FabWithLabelView fabWithLabelView : mFabWithLabelViews) {
+            if(fabWithLabelView.getSpeedDialActionItem().getId() == id){
+                return fabWithLabelView;
+            }
+        }
+        return null;
+    }
+
+    public void enableSpeedDialActionItemById(int id, boolean enable){
+        FabWithLabelView view = getFabWithLabelViewsById(id);
+        if(view != null) {
+            view.setEnabled(enable);
+        }
+    }
+
     @NonNull
     @Override
     public CoordinatorLayout.Behavior getBehavior() {
