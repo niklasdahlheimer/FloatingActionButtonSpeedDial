@@ -92,6 +92,12 @@ public class FabWithLabelView extends LinearLayout {
         }
     }
 
+    public void setEnabled(boolean isEnabled){
+        getFab().setAlpha(isEnabled ? 1f : 0.3f);
+        getFab().setEnabled(isEnabled);
+        getLabelBackground().setEnabled(isEnabled);
+    }
+
     @Override
     public void setOrientation(int orientation) {
         super.setOrientation(orientation);
