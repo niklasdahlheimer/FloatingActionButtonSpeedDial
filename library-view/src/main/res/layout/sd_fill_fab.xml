@@ -27,6 +27,6 @@
         app:fabSize="mini"
         app:tint="@null"
         app:maxImageSize="40dp"
-        app:useCompatPadding="true" />
+        />
 
 </merge>
